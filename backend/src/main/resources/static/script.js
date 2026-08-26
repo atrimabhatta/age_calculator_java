@@ -28,10 +28,20 @@ form.addEventListener("submit", async (event) => {
         if (!response.ok) {
             throw new Error(data.message || "Unable to calculate age");
         }
+        document.getElementById("ageNumber").textContent = data.age;
+        document.getElementById("resultName").textContent = name;
 
-        result.textContent = `${name} is ${data.age} years old.`;
+        const date = new Date(dob + "T00:00:00");
+
+        const formattedDate = date.toLocaleDateString("en-GB", {
+            day: "2-digit",
+            month: "long",
+            year: "numeric"
+        });
+
+        document.getElementById("resultDob").textContent = formattedDate;
+
         result.classList.remove("hidden");
-
     } catch (err) {
         console.error("API Error:", err);
         error.textContent = err.message || "Unable to connect to the server.";

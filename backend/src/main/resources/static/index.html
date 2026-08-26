@@ -3,44 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Age Calculator</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 </head>
+
 <body>
 
-    <main class="container">
-        <div class="card">
-            <h1>Age Calculator</h1>
-            <p class="subtitle">Enter your details to calculate your age.</p>
+    <!-- Background decorations -->
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+    <div class="dot-pattern"></div>
 
+    <main class="page">
+
+        <section class="calculator-card">
+
+            <!-- Badge -->
+            <div class="badge">
+                <span class="badge-icon">▣</span>
+                AGE CALCULATOR
+            </div>
+
+            <!-- Heading -->
+            <h1>
+                Discover your age
+            </h1>
+
+            <p class="subtitle">
+                Enter your details below and instantly
+                calculate your exact age.
+            </p>
+
+            <div class="divider">
+                <span></span>
+                <div class="heart-icon">♡</div>
+                <span></span>
+            </div>
+
+            <!-- Form -->
             <form id="ageForm">
+
+                <!-- Name -->
                 <div class="form-group">
-                    <label for="name">Name</label>
-                    <input
-                        type="text"
-                        id="name"
-                        placeholder="Enter your name"
-                        required
-                    >
+
+                    <label for="name">
+                        Name
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            <svg
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <circle cx="12" cy="8" r="4"></circle>
+                                <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"></path>
+                            </svg>
+                        </span>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
                 </div>
 
+
+                <!-- Date of birth -->
                 <div class="form-group">
-                    <label for="dob">Date of Birth</label>
-                    <input
-                        type="date"
-                        id="dob"
-                        required
-                    >
+
+                    <label for="dob">
+                        Date of Birth
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <span class="input-icon">
+                            <svg
+                                width="22"
+                                height="22"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <rect
+                                    x="3"
+                                    y="4"
+                                    width="18"
+                                    height="18"
+                                    rx="2"
+                                ></rect>
+
+                                <line
+                                    x1="16"
+                                    y1="2"
+                                    x2="16"
+                                    y2="6"
+                                ></line>
+
+                                <line
+                                    x1="8"
+                                    y1="2"
+                                    x2="8"
+                                    y2="6"
+                                ></line>
+
+                                <line
+                                    x1="3"
+                                    y1="10"
+                                    x2="21"
+                                    y2="10"
+                                ></line>
+                            </svg>
+                        </span>
+
+                        <input
+                            type="date"
+                            id="dob"
+                            name="dob"
+                            required
+                        >
+
+                    </div>
                 </div>
 
-                <button type="submit">Calculate Age</button>
+
+                <!-- Calculate button -->
+                <button
+                    type="submit"
+                    class="calculate-btn"
+                >
+
+                    <span class="button-icon">
+                        <svg
+                            width="22"
+                            height="22"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <rect
+                                x="4"
+                                y="3"
+                                width="16"
+                                height="18"
+                                rx="2"
+                            ></rect>
+
+                            <line x1="8" y1="7" x2="16" y2="7"></line>
+                            <line x1="8" y1="11" x2="10" y2="11"></line>
+                            <line x1="14" y1="11" x2="16" y2="11"></line>
+                            <line x1="8" y1="15" x2="10" y2="15"></line>
+                            <line x1="14" y1="15" x2="16" y2="15"></line>
+                            <line x1="8" y1="19" x2="10" y2="19"></line>
+                            <line x1="14" y1="19" x2="16" y2="19"></line>
+                        </svg>
+                    </span>
+
+                    Calculate Age
+
+                </button>
+
             </form>
 
-            <div id="result" class="result hidden"></div>
-            <div id="error" class="error hidden"></div>
-        </div>
+
+            <!-- Result -->
+            <div
+                id="result"
+                class="result-card hidden"
+            >
+                <div class="result-header">
+                    <span class="result-sparkle">✦</span>
+                    Here's your result!
+                    <span class="success-icon">✓</span>
+                </div>
+
+                <div class="age-number">
+                    <span id="ageNumber">25</span>
+                </div>
+
+                <div class="age-label">
+                    Years old
+                </div>
+
+                <div class="result-line"></div>
+
+                <div class="person-name">
+                    <span id="resultName">Tushit</span> 🎉
+                </div>
+
+                <div class="birth-date">
+                    <span>▣</span>
+                    Born on
+                    <span id="resultDob">08 April 2001</span>
+                </div>
+            </div>
+
+
+            <!-- Error -->
+            <div
+                id="error"
+                class="error-message hidden"
+            ></div>
+
+
+            <!-- Footer -->
+            <div class="secure-footer">
+
+                <div class="secure-icon">
+                    ✓
+                </div>
+
+                <span>
+                    Your data is safe and secure with us.
+                </span>
+
+            </div>
+
+        </section>
+
     </main>
 
     <script src="script.js"></script>
+
 </body>
 </html>
