@@ -12,7 +12,7 @@ form.addEventListener("submit", async (event) => {
     error.classList.add("hidden");
 
     try {
-        const response = await fetch("https://age-calculator-java.onrender.com/", {
+        fetch("/api/calculate-age", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
