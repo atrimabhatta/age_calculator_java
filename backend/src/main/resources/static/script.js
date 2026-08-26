@@ -12,7 +12,7 @@ form.addEventListener("submit", async (event) => {
     error.classList.add("hidden");
 
     try {
-        fetch("/api/calculate-age", {
+        const response = await fetch("/api/calculate-age", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
