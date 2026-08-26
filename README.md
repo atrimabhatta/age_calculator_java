@@ -430,6 +430,8 @@ Supabase
 It is intentionally simple while demonstrating the core concepts of building, connecting, and deploying a modern full-stack application.
 
 ---
+## Output
+<img width="2880" height="1800" alt="image" src="https://github.com/user-attachments/assets/de94eb02-5c07-4ca7-881d-778d72e560ae" />
 
 ## 👨‍💻 Author
 
