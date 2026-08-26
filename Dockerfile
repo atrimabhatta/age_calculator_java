@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY pom.xml .
 
-COPY backend/src ./src
+COPY backend/src
 
 RUN mvn clean package -DskipTests
 
